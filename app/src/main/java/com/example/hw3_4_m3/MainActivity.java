@@ -12,7 +12,6 @@ import android.widget.EditText;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hw3_4_m3.adapter.ToysAdapter;
-import com.example.hw3_4_m3.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 
@@ -24,9 +23,10 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        findView();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findView();
+        addData();
         ToysAdapter adapter = new ToysAdapter(toyList, imgList);
         recyclerView.setAdapter(adapter);
     }
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
         recyclerView = findViewById(R.id.recycler_view);
     }
 
-    void toysList() {
+    void addData() {
         toyList.add("Taddy");
         toyList.add("Doll");
         toyList.add("Car");
@@ -46,5 +46,11 @@ public class MainActivity extends Activity {
         toyList.add("Taddy");
         toyList.add("Taddy");
         toyList.add("Taddy");
+        imgList.add(R.drawable.logo);
+        imgList.add(R.drawable.logo);
+        imgList.add(R.drawable.logo);
+        imgList.add(R.drawable.logo);
+        imgList.add(R.drawable.logo);
     }
+
 }

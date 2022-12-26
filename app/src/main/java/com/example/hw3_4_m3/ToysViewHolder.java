@@ -18,6 +18,7 @@ public class ToysViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(String name, Integer image) {
+        textViewToy.setText(name);
         imageViewToy.setImageResource(image);
     }
 
